@@ -2,4 +2,7 @@
 /.idea
 
 /front/*
+/back/*
+
 !Dockerfile
+!Gemfile

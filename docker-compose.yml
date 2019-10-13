@@ -1,23 +1,25 @@
 version: "3"
 
 services:
-#  db:
-#    container_name: sample_db
-#    image: postgres:11.4-alpine
-#    environment:
-#      - TZ=Asia/Tokyo
-#    volumes:
-#      - ./back/tmp/db:/var/lib/postgresql/data
-#
-#  back:
-#    container_name: sample_back
-#    build: back/
-#    volumes:
-#      - ./back:/app
-#    depends_on:
-#      - db
-#    ports:
-#      - 3000:3000
+  db:
+    container_name: sample_db
+    image: postgres:11.4-alpine
+    environment:
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./back/tmp/db:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+
+  back:
+    container_name: sample_back
+    build: back/
+    volumes:
+      - ./back:/app
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
 
   front:
     container_name: sample_front
