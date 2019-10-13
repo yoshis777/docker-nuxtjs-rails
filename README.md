@@ -5,6 +5,11 @@
 
 手順は[Nuxt.js + Rails(API) on DockerのHello Worldするべ！](https://qiita.com/at-946/items/08de3c9d7611f62b1894)を参考にさせて頂きました。
 
+# ブランチ
+| ブランチ名 | 状態 |
+---- | ----
+| master | 最新の状態 |
+| docker-build | 開発環境の最小構成。構築後のNuxt.jsやRailsファイルの中身はコミットしていない。docker-compose upにより上記構成のコンテナ群が作成される。 |
 
 # 補足
 * [スモールスタートではじめるSSR](https://tech.dely.jp/entry/min_ssr)
