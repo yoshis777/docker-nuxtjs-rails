@@ -9,7 +9,7 @@ services:
     volumes:
       - ./back/tmp/db:/var/lib/postgresql/data
     ports:
-      - 5433:5432
+      - 5433:5432 #DBクライアントから接続したいので追加
 
   back:
     container_name: sample_back
@@ -18,8 +18,8 @@ services:
       - ./back:/app
     depends_on:
       - db
-    ports:
-      - 3000:3000
+#    ports: # 外部公開ポート設定（ポートフォワーディング）（外部からのポート：コンテナ内のリッスンポート）
+#      - 3000:3000
 
   front:
     container_name: sample_front
