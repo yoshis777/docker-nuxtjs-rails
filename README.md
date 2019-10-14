@@ -8,10 +8,20 @@
 # ブランチ
 | ブランチ名 | 状態 |
 ---- | ----
-| master | 最新の状態 |
+| master | 最新の状態。動くやつ |
+| builded-nuxt-rails | nuxt.jsとRailsのアプリ作成後の展開したもの。DB設定済。 |
 | docker-build | 開発環境の最小構成。構築後のNuxt.jsやRailsファイルの中身はコミットしていない。docker-compose upにより上記構成のコンテナ群が作成される。 |
 
-# 補足
+# ハマった点
+#### axiosでhttp://back:3000で403エラーとなる
+* [原因]Railsでlocalhostと0.0.0.0/0(IP指定の全て)のみの許可設定となっているため
+* [解決]以下でホスト名指定でのアクセス許可の追記
+```ruby
+[development.rb]
+Rails.application.config.hosts << 'back'
+```
+
+# 参考補足
 * [スモールスタートではじめるSSR](https://tech.dely.jp/entry/min_ssr)
     * ※SSRで始める場合。SSRかSPAかはNuxt.jsアプリの構築時(npx create-nuxt-app)に選択できる
 * [docker-compose `up` とか `build` とか `start` とかの違いを理解できていなかったのでまとめてみた。](https://qiita.com/tegnike/items/bcdcee0320e11a928d46)
