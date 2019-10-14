@@ -8,8 +8,8 @@
 # ブランチ
 | ブランチ名 | 状態 |
 ---- | ----
-| master | 最新の状態。動くやつ |
-| builded-nuxt-rails | nuxt.jsとRailsのアプリ作成後の展開したもの。DB設定済。 |
+| master | 最新の状態。動くやつ。 |
+| builded-nuxt-rails | nuxt.jsとRails6(APIモード)のアプリ作成後の展開したもの。DB設定済。 |
 | docker-build | 開発環境の最小構成。構築後のNuxt.jsやRailsファイルの中身はコミットしていない。docker-compose upにより上記構成のコンテナ群が作成される。 |
 
 # ハマった点
