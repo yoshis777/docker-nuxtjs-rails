@@ -21,7 +21,7 @@
         methods: {
             post() {
                 this.$axios.post(
-                    '/api/users',
+                    '/users',
                     {
                         name: this.name
                     }

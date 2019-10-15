@@ -5,7 +5,7 @@
 <script>
     export default {
         asyncData({ $axios, params }) {
-            return $axios.$get(`/api/users/${params.id}`)
+            return $axios.$get(`/users/${params.id}`)
                 .then((res) => {
                     return { name: res.name }
                 })

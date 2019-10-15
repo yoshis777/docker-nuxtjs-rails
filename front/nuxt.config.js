@@ -28,7 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    'plugins/axios'
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,13 +40,11 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
   ],
   axios: {
-    proxy: true
-  },
-  proxy: {
-    '/api/': { target: 'https://nuxtjs-rails-back.herokuapp.com/', pathRewrite: { '^/api/': '/' } }
+    host: '127.0.0.1',
+    port: 8080,
+    prefix: '/api',
   },
   /*
   ** Build configuration
