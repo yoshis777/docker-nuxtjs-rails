@@ -46,7 +46,7 @@ export default {
     proxy: true
   },
   proxy: {
-    '/api/': { target: 'https://nuxtjs-rails-front.herokuapp.com/', pathRewrite: { '^/api/': '/' } }
+    '/api/': { target: 'https://nuxtjs-rails-back.herokuapp.com/', pathRewrite: { '^/api/': '/' } }
   },
   /*
   ** Build configuration
