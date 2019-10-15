@@ -19,5 +19,4 @@ RUN apk update && \
     apk del build-dependencies
 
 ADD . ${HOME}
-
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-p", "8080", "-b", "0.0.0.0"]

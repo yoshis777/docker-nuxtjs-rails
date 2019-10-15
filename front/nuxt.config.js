@@ -28,7 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-
+    'plugins/axios'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,7 +42,7 @@ export default {
     '@nuxtjs/axios',
   ],
   axios: {
-    host: '127.0.0.1',
+    host: 'back',
     port: 8080,
     prefix: '/api',
   },
